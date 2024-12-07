@@ -1,5 +1,4 @@
 import FlashSales from "@/components/FlashSale";
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import Featured from "@/components/Featured";
 import Category from "@/components/Category";

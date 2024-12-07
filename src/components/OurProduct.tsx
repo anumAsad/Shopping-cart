@@ -76,13 +76,6 @@ const OurProduct = () => {
     <div className="container w-full px-[120px] py-[493] mt-10 border-2 border-neutral-100 ">
         <div className='text-red-500 font-bold border-l-8 border-red-500 pl-3 ml-1'>
         <h3 >Our Products</h3>
-        {/* <div>
-        <Image
-        src={ThisMonth}
-        alt='Image'
-        width={125}
-        height={40}
-        /> */}
         </div>
       <div className="mb-6 flex justify-between items-center">
         <div><h2 className="text-2xl font-semibold">Explore Our Products</h2>
@@ -103,9 +96,11 @@ const OurProduct = () => {
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
           >
             <div className="relative">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={190}
+                height={180}
                 className="w-full h-48 object-cover rounded-lg"
               />
               <button className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md hover:shadow-lg">

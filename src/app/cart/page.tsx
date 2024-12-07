@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 
 const Cart: React.FC = () => {
@@ -26,7 +27,7 @@ const Cart: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-4">
           {/* Product Details */}
           <div className="flex flex-1 items-center mb-4 md:mb-0">
-            <img
+            <Image
               src="/monitor.png"
               alt="LCD Monitor"
               className="w-16 h-16 object-cover rounded mr-4"
@@ -56,7 +57,7 @@ const Cart: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start bg-white shadow rounded-lg p-4">
           {/* Product Details */}
           <div className="flex flex-1 items-center mb-4 md:mb-0">
-            <img
+            <Image
               src="/gamepad.png"
               alt="H1 Gamepad"
               className="w-16 h-16 object-cover rounded mr-4"

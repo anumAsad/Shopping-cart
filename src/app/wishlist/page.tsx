@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import React, { useState } from "react";
 
 // Define the Product type
@@ -9,7 +10,7 @@ interface Product {
   image: string;
 }
 
-const wishlist: React.FC = () => {
+const Wishlist: React.FC = () => {
   const [wishlist, setWishlist] = useState<Product[]>([]);
 
   const products: Product[] = [
@@ -40,7 +41,7 @@ const wishlist: React.FC = () => {
                 key={item.id}
                 className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-cover rounded-lg"
@@ -68,7 +69,7 @@ const wishlist: React.FC = () => {
               key={product.id}
               className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover rounded-lg"
@@ -95,4 +96,4 @@ const wishlist: React.FC = () => {
   );
 };
 
-export default wishlist;
+export default Wishlist;

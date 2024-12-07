@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Today from "../../public/today.png"
 import FlashSaleCountdown from "../components/Countdown";
 
 const FlashSales = () => {
@@ -51,14 +50,7 @@ const FlashSales = () => {
   return (
     <div className='container w-full px-[120px] py-[493] mt-10 bg-white border-2 border-neutral-100'>
       <div className='text-red-500 font-bold border-l-8 border-red-500 pl-3 ml-1'>
-      <h3 >Today's</h3>
-      {/* <div>
-        <Image 
-        src={Today}
-        alt="Image"
-        width={100}
-        height={40}
-        /> */}
+      <h3 >Today&apos;s</h3>
       </div>
       <div>
         <h2 className="flex gap-8 text-3xl font-bold text-center items-center mb-6">Flash Sales
@@ -68,9 +60,11 @@ const FlashSales = () => {
           {products.map((product) => (
             <div key={product.id} className="bg-gray-100 p-4 rounded-lg shadow-md">
               <div className="relative">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  width={172}
+                  height={152}
                   className="w-full h-40 object-contain"
                 />
                 <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">

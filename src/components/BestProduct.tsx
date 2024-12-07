@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import ThisMonth from "../../public/this-month.png"
 
 const BestProduct = () => {
   const products = [
@@ -67,9 +66,11 @@ const BestProduct = () => {
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
           >
             <div className="relative">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={140}
+                height={146}
                 className="w-full h-48 object-cover rounded-lg"
               />
               <button className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md hover:shadow-lg">

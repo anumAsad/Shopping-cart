@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 type FlashSaleCountdownProps = {
   endTime: string;
@@ -13,7 +13,8 @@ const FlashSaleCountdown: React.FC<FlashSaleCountdownProps> = ({ endTime }) => {
     seconds: number;
   } | null>(null);
 
-  function calculateTimeLeft() {
+  // Memoize calculateTimeLeft to prevent re-definition on every render
+  const calculateTimeLeft = useCallback(() => {
     const difference = new Date(endTime).getTime() - new Date().getTime();
     if (difference > 0) {
       return {
@@ -24,7 +25,7 @@ const FlashSaleCountdown: React.FC<FlashSaleCountdownProps> = ({ endTime }) => {
       };
     }
     return null;
-  }
+  }, [endTime]); // Add endTime as a dependency to recalculate when it changes
 
   useEffect(() => {
     // Initialize timer logic on the client
@@ -34,7 +35,7 @@ const FlashSaleCountdown: React.FC<FlashSaleCountdownProps> = ({ endTime }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [endTime]);
+  }, [calculateTimeLeft]); // Add calculateTimeLeft as a dependency
 
   if (!timeLeft) {
     return <div className="text-red-500 text-xl">Flash Sale Ended!</div>;

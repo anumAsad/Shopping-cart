@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Feature from "../../public/featured.png"
 
 const Featured = () => {
   return (
@@ -9,14 +8,7 @@ const Featured = () => {
       </div>
       {/* Section Header */}
       <div className="mb-6">
-        {/* <span>
-          <Image
-          src={Feature}
-          alt="Image"
-          width={110}
-          height={40}
-          />
-        </span> */}
+       
         <h2 className="text-3xl font-bold mt-2">New Arrival</h2>
       </div>
 
@@ -49,13 +41,13 @@ const Featured = () => {
         <div className="relative bg-black text-white p-6 rounded-lg w-[570] h-[284]">
           <Image
             src="/woman.png"
-            alt="Women's Collections"
+            alt="Women&apos;s Collections"
             width={432}
             height={286}
             className="rounded-lg"
           />
           <div className="absolute bottom-4 left-4">
-            <h3 className="text-xl font-bold">Women's Collections</h3>
+            <h3 className="text-xl font-bold">Women&apos;s Collections</h3>
             <p className="text-sm mt-2">
               Featured woman collections that give you another vibe.
             </p>
