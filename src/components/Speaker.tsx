@@ -3,7 +3,7 @@ import Hours from '../../public/hours.png'
 import Days from '../../public/days.png'
 import Minutes from '../../public/minutes.png'
 import Seconds from '../../public/seconds.png'
-import Speakers from '../../public/jumbospeaker.png'
+import Speakers from '../../public/Jumbospeaker.png'
 import React from 'react'
 
 const Speaker = () => {
